@@ -1,0 +1,14 @@
+name: Test2
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, world!"
+      - uses: actions/checkout@v4
+      - run: echo "Hello, world!" > test.txt
+      - run: ls -al

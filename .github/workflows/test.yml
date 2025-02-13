@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pwd
+      - run: ls -al
       - uses: actions/checkout@v4
       - run: mkdir -p upload
       - run: echo "Hello, world!" > upload/test.txt

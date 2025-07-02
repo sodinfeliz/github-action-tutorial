@@ -21,8 +21,9 @@ jobs:
       #     name: dist-files
       #     path: dist
       - name: Upload to PyPI
+        run: |
+          python -m twine upload dist/*
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-        run: python -m twine upload dist/*
 
